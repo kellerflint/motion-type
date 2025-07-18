@@ -1,0 +1,107 @@
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #252526;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #cccccc;
+}
+
+.status-bar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.vim-mode {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.vim-mode-normal {
+  background-color: #007acc;
+  color: white;
+}
+
+.vim-mode-insert {
+  background-color: #16825d;
+  color: white;
+}
+
+.vim-mode-visual {
+  background-color: #c5932c;
+  color: white;
+}
+
+.vim-mode-replace {
+  background-color: #a31515;
+  color: white;
+}
+
+.editor-container {
+  flex: 1;
+  margin: 0;
+  overflow: hidden;
+}
+
+.vim-command-line {
+  background-color: #252526;
+  border-top: 1px solid #3c3c3c;
+  padding: 0.5rem 1rem;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  color: #cccccc;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+/* Disable text selection in UI elements */
+.header, .status-bar, .vim-command-line {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Ensure the Monaco editor takes full available space */
+.monaco-editor {
+  background-color: #1e1e1e !important;
+}
+
+/* Hide scrollbars to encourage keyboard navigation */
+.monaco-editor .scrollbar {
+  display: none !important;
+}
+
+/* Customize cursor for VIM modes */
+.monaco-editor.insert-mode .cursor {
+  border-left: 2px solid #cccccc;
+}
+
+.monaco-editor.normal-mode .cursor {
+  background-color: #cccccc;
+  border: 1px solid #cccccc;
+}
+
+.monaco-editor.visual-mode .cursor {
+  background-color: rgba(197, 147, 44, 0.3);
+}
